@@ -9,7 +9,15 @@
         <p>Click on the below button and speak something...</p>
         <p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
         <div id="output" class="hide"></div>
+ 
+        <!-- code for volume meter -->
+        <div class="volume-meter">
+            <button onclick=beginDetect()>Begin Detect Your Volume</button>
+            <p><span id="status"></span></p>
+        </div>
+
 	</body>
 </html> 
 
-<script src ="speechConvertToText.js"></script>
+<script src ="./scripts/speechConvertToText.js"></script>
+<script src ="./scripts/volumeMeter.js"></script>
