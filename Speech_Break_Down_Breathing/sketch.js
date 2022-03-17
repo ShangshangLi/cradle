@@ -19,10 +19,10 @@ let centerX, centerY, fontSize, INNER_RADIUS, RADIUS_VARIATION;
 let pct,pixToAngularPct;
 
 function preload() {
-  initialSound = loadTable('initialSound.csv', 'csv', 'header');
-  song = createAudio('lullaby.mp3');
-  cursorImg = loadImage('stopCursor.png');
-  infoImg = loadImage('info.png');
+  initialSound = loadTable('./assets/initialSound.csv', 'csv', 'header');
+  song = createAudio('./assets/lullaby.mp3');
+  cursorImg = loadImage('./assets/stopCursor.png');
+  infoImg = loadImage('./assets/info.png');
 }
 
 function setup(){
