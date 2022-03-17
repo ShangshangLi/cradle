@@ -47,7 +47,6 @@ function setup() {
   let continuous = true; //the SpeechRec originally only listen to one thing, the folloing step help to make it work continuously;
   let interim = false; //if interim is true, the SpeechRec will keep listening, like the painting example;
   speechRec.start(continuous, interim);
-
   // speechRec.start();//the program only listen once;  
 
   function gotSpeech() {
@@ -61,7 +60,7 @@ function setup() {
 
       //speak;
       speech = new p5.Speech(voiceReady);
-
+      speech.setVoice(10);
       // speech.started(startSpeaking);
       // speech.ended(endSpeaking);
       //speech.speak(dealSpeech(speechResult));
@@ -80,6 +79,7 @@ function setup() {
 
   function voiceReady() {
     console.log(speech.voices); //i don't know why it cannot load the voice list;
+    console.log(speech.listVoices());
   }
 
 }
@@ -97,9 +97,9 @@ function mousePressed() {
   let voices = speech.voices;
   //let voice = random(voices);//get a random speaker;
   // console.log(voice.name);
-  let voice = speech.setVoice(10);
+  // let voice = speech.setVoice(10);
   // speech.setVoice(voice.name);//to change the voice by number or by name;
-  // speech.setVoice('Alex');
+  //speech.setVoice('Alice');
   //10\16\17\25;
   // voice.setVolume(0.1);
   speech.setRate(1);
@@ -314,7 +314,7 @@ function draw() {
   //   }
   // }
   image(infoImg, windowWidth - 40, 20, 30, 30)
-  console.log('mouseX:' + mouseX + ',mouseY:' + mouseY)
+  //console.log('mouseX:' + mouseX + ',mouseY:' + mouseY)
 }
 
 function drawText() {
@@ -359,7 +359,7 @@ function drawText() {
       adjustY = +10;
     }
     translate(p.x + adjustX, p.y + adjustY); //make the text above the breathing heart a little bit;
-    console.log("p.x=" + p.x + ",p.y=" + p.y);
+    //console.log("p.x=" + p.x + ",p.y=" + p.y);
     rotate(angle);
     translate(-p.x, -p.y);
 
