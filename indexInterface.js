@@ -25,12 +25,11 @@ function setup() {
   INNER_RADIUS = screenPct * 200;
   RADIUS_VARIATION = screenPct * 200;
   textFont('Nova Flat');
-  fontSize = screenPct * 50;
+  fontSize = screenPct * 45;
   textSize(fontSize);
   titleFS = screenPct * 100;
   song.volume(0.2);
   song.loop();
-
   noCursor();
 
 }
@@ -63,9 +62,9 @@ function draw() {
   }
 
   textSize(titleFS);
-  text(title,windowWidth/20,windowHeight-windowWidth/20*2);
+  text(title,windowWidth/20,windowHeight-windowWidth/20*2.5);
   textSize(fontSize);
-  text(subtitle,windowWidth/20,windowHeight-windowWidth/20);
+  text(subtitle,windowWidth/20,windowHeight-windowWidth/20*1.7);
 
   textSize(fontSize);
   noFill();
