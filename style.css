@@ -1,7 +1,13 @@
 html, body {
   margin: 0;
   padding: 0;
+  color:pink;
 }
 canvas {
   display: block;
+}
+
+a{
+  color:gray;
+  text-decoration: none;
 }
